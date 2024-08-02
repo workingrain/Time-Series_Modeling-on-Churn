@@ -9,7 +9,7 @@ My goals for this analysis are to identify revenue trends and patterns and condu
 Time series models require the data to be stationary to make accurate and meaningful predictions. Non-stationary data can lead to unreliable forecasts. A time series is stationary if its statistical properties, such as mean, variance, and autocorrelation, are constant over time.
 Autocorrelation in time series analysis assumes that current values are correlated with past values. Significant autocorrelation indicates that future values depend on previous observations. This is crucial for selecting appropriate model like ARIMA. 
 
-## RESULTS### 
+## RESULTS
 SELECTION OF AN ARIMA MODEL
 To identify the most suitable ARIMA model, I used the auto_arima function, which automatically selects the best parameters for the ARIMA model based on the data. This function tests different combinations of p, d, and q parameters and selects the one with the lowest AIC. 
 The final and best model is ARIMA(1,1,0)(0,1,0)[90]. The chosen model shown as ARIMA(1,1,0) indicates a first-order autoregressive model (AR=1), first-order differencing (I=1), and no moving average component (MA=0). The Seasonal Component shown as (0,1,0)[90] has no seasonal autoregressive or moving average components but includes seasonal differencing with a period of 90 days.
